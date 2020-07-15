@@ -109,7 +109,8 @@ a:hover {
   background: transparent;
 }
 
-html, body {
+html,
+body {
   height: 100%;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -679,8 +680,12 @@ header nav.navbar .nav-item.active .nav-link {
   border-bottom-color: #ab1032;
 }
 
+.sections.values .cont-wrap .row .col-sm-6 {
+  padding: 0px;
+}
+
 .sections.values .group-list {
-  margin: 60px 40px 0;
+  margin: 60px 0 0;
   width: 100%;
 }
 
@@ -1022,8 +1027,8 @@ footer ul li a {
   stroke-dashoffset: 0;
   stroke-dashArray: 300;
   stroke-width: 4px;
-  -webkit-transition: stroke-dashoffset 1s ease,  opacity 1s ease;
-  transition: stroke-dashoffset 1s ease,  opacity 1s ease;
+  -webkit-transition: stroke-dashoffset 1s ease, opacity 1s ease;
+  transition: stroke-dashoffset 1s ease, opacity 1s ease;
 }
 
 .play {
