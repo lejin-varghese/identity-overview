@@ -998,31 +998,67 @@ header.purpose-nav.fixed .navbar-brand svg {
 
 .hero-banner.roundup-banner {
   background-size: cover !important;
-  background-position: center top !important;
+  background-position: bottom center !important;
   background: url(../images/executive-committee.jpg) #dae1ed;
   background-repeat: no-repeat;
 }
 
 .hero-banner.roundup-banner .hero-text-wrap {
-  max-width: 1160px;
+  max-width: 1230px;
   margin: auto;
   margin-top: 100px;
-  padding: 0 20px;
+  padding: 50px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.9);
+  -webkit-animation-delay: -1s;
+          animation-delay: -1s;
+  -webkit-animation: mymove 1s 1;
+          animation: mymove 1s 1;
 }
 
 .hero-banner.roundup-banner .hero-text-wrap .quote {
   color: #535353;
   font-size: 46px;
   font-family: 'Conv_ADOBE GARAMOND PRO ITALIC';
-  text-align: center;
   line-height: 65px;
 }
 
 .hero-banner.roundup-banner .hero-text-wrap .position {
-  text-align: center;
   color: #535353;
   font-size: 25px;
   margin-bottom: 0;
+}
+
+@-webkit-keyframes mymove {
+  0% {
+    left: -100px;
+    opacity: 0;
+  }
+  60% {
+    left: -100px;
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    left: 0;
+  }
+}
+
+@keyframes mymove {
+  0% {
+    left: -100px;
+    opacity: 0;
+  }
+  60% {
+    left: -100px;
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    left: 0;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -2969,8 +3005,14 @@ footer ul li a {
 }
 
 .video-wall-section .wrap {
-  width: 800px;
+  max-width: 800px;
   margin: auto;
+}
+
+@media (max-width: 980px) {
+  .video-wall-section .wrap {
+    padding: 30px;
+  }
 }
 
 .video-wall-section .wrap .button-wrap .card-anim {
@@ -3011,6 +3053,22 @@ footer ul li a {
 .video-wall-section .wrap .button-wrap .card-anim span:last-child {
   -webkit-transform: rotate(-25deg);
           transform: rotate(-25deg);
+}
+
+@media (max-width: 980px) {
+  .video-wall-section .wrap .button-wrap .card-anim {
+    height: 228px;
+  }
+  .video-wall-section .wrap .button-wrap .card-anim span {
+    -webkit-transform-origin: center 200px;
+            transform-origin: center 200px;
+    -webkit-transition: all .6s linear;
+    transition: all .6s linear;
+    display: block;
+    width: 80px;
+    margin-left: -40px;
+    left: 50%;
+  }
 }
 
 .video-wall-section .wrap .button-wrap:hover .card-anim span:first-child {
